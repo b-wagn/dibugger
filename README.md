@@ -1,5 +1,7 @@
 # DIbugger - Understanding Counterexamples for Relational Program Properties
 
+Note: This is my copy of our project. The official project is [here](https://git.scc.kit.edu/i57/dibugger).
+
 DIbugger is a tool that allows to debug through multiple programs simultaneously and evaluate relationships between those executions.
 A detailed explanation can be found in the paper [Herda et al. 2019](https://formal.iti.kit.edu/biblio/?lang=en&key=HerdaKirstenEA2019).
 
