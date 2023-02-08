@@ -1,0 +1,67 @@
+PROGRAM{
+	stepsize=1
+	name='A'
+	lastExecLine=0
+	PROGRAMTEXT{
+		def_blockLen=11
+int main(int a, int b) {                                        
+   int i = 0;                                                   
+   while (a != b && i < 50) {                                  
+      i = i + 1;                                                
+      if(a > b)                                                 
+         a = a - b;                                             
+      else                                                      
+         b = b - a;                                             
+   }                                                            
+   return a;                                                    
+}                                                               
+
+	}
+	INPUTVALUES{
+		a='2'
+		b='4'
+	}
+	VARINSPECTOR{
+	}
+	BREAKPOINTS{
+	}
+}
+PROGRAM{
+	stepsize=1
+	name='B'
+	lastExecLine=0
+	PROGRAMTEXT{
+		def_blockLen=11
+int main(int b, int a) {                                        
+   int i = 0;                                                   
+   while (a != b && i < 50) {                                  
+      i = i + 1;                                                
+      if(b > a)                                                 
+         a = a - b;                                             
+      else                                                      
+         b = b - a;                                             
+   }                                                            
+   return b;                                                    
+}                                                               
+
+	}
+	INPUTVALUES{
+		a='4'
+		b='2'
+	}
+	VARINSPECTOR{
+	}
+	BREAKPOINTS{
+	}
+}
+CONDBREAKPOINT{
+	expression='A.a != B.b'
+	SCOPE{
+		begin=1
+		end=11
+	}
+	SCOPE{
+		begin=1
+		end=11
+	}
+}

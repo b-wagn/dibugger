@@ -1,0 +1,65 @@
+PROGRAM{
+	stepsize=1
+	name='A'
+	lastExecLine=0
+	PROGRAMTEXT{
+		def_blockLen=10
+int main(int h, int l){                                         
+   int low = 0;                                                 
+   if(h==0){                                                    
+      low = l;                                                  
+   }                                                            
+   else{                                                        
+      low = l + 1;                                              
+   }                                                            
+   return low;                                                  
+}                                                               
+
+	}
+	INPUTVALUES{
+		h='0'
+		l='1'
+	}
+	VARINSPECTOR{
+	}
+	BREAKPOINTS{
+	}
+}
+PROGRAM{
+	stepsize=1
+	name='B'
+	lastExecLine=0
+	PROGRAMTEXT{
+		def_blockLen=10
+int main(int h, int l){                                         
+   int low = 0;                                                 
+   if(h==0){                                                    
+      low = l;                                                  
+   }                                                            
+   else{                                                        
+      low = l + 1;                                              
+   }                                                            
+   return low;                                                  
+}                                                               
+
+	}
+	INPUTVALUES{
+		h='1'
+		l='1'
+	}
+	VARINSPECTOR{
+	}
+	BREAKPOINTS{
+	}
+}
+CONDBREAKPOINT{
+	expression='A.low != B.low'
+	SCOPE{
+		begin=1
+		end=10
+	}
+	SCOPE{
+		begin=1
+		end=10
+	}
+}
